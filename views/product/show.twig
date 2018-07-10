@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Detail</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/products">Product List</a></h3>
+            <h1>Product Detail</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{ product.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>{{ product.price }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3><a href="/products/edit/{{ product._id }}">EDIT</a></h3>
+            <form action="/products/delete/{{ product._id }}" method="post">
+                <button type="submit">DELETE</button>
+            </form>
+        </div>
+    </body>
+</html>
